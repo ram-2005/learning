@@ -30,7 +30,7 @@ next.addEventListener('click', () =>{
 
     }
 
-    Update()
+    update()
     
  })
 
@@ -38,7 +38,7 @@ next.addEventListener('click', () =>{
  function update() {
 
     circles.forEach((circle, idx) => {
-
+    console.log(idx+'-'+currentActive);
         if(idx < currentActive) {
             
             circle.classList.add('active')
@@ -61,10 +61,11 @@ next.addEventListener('click', () =>{
     }else if(currentActive === circles.length){ 
 
         next.disabled = true
+      //  prev.disabled = false
     } else {
 
         prev.disabled = false
-        next.disabled = true
+        next.disabled = false
     }
  }
 
